@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Advanced Meta Tags -->
+    <title>Capital Mindset | Institutional Trading & Price Action Mastery</title>
+    <meta name="description" content="Think Like Institutions. Trade With Discipline. Capital Mindset by Amit Deshmukh provides premium institutional trading education, market analysis, and the exclusive CMS Indicator.">
+    <meta name="keywords" content="Capital Mindset, Amit Deshmukh, Institutional Trading, Price Action, CMS Indicator, Nifty Analysis, TradingView, Risk Management, Trading Psychology">
+    <meta name="author" content="Amit Deshmukh | Capital Mindset">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Capital Mindset | Trade With Discipline">
+    <meta property="og:description" content="Master the markets with institutional concepts, advanced risk management, and the CMS Indicator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.capitalmindset.com">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capital Mindset | Institutional Edge">
+    <meta name="twitter:description" content="Think Like Institutions. Trade With Discipline.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Capital Mindset",
+      "founder": {
+        "@type": "Person",
+        "name": "Amit Deshmukh"
+      },
+      "url": "https://www.capitalmindset.com",
+      "slogan": "Think Like Institutions. Trade With Discipline.",
+      "description": "Premium institutional trading education and algorithmic analysis."
+    }
+    </script>
+
+    <!-- Fonts (Preloaded for Performance) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollBar"></div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="cms-logo-spinner mb-4">CM</div>
+            <h4 class="gold-text font-heading text-uppercase tracking-widest mb-2">Capital Mindset</h4>
+            <p class="text-gray small terminal-font" id="loader-text">Loading Institutional Data... 0%</p>
+        </div>
+    </div>
+
+    
+    <!-- Premium Sticky Navbar -->
+    <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+    <div class="container align-items-center">
+        <!-- Logo and Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2 custom-brand" href="#home">
+            <img src="images/logo.png" class="nav-logo" alt="Capital Mindset Logo">
+            <span class="gold-text fw-bold text-uppercase brand-text font-heading">Capital Mindset</span>
+        </a>
+        
+        <!-- Toggle for Mobile -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars gold-text"></i>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto text-uppercase small fw-bold tracking-wide">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#edge">Edge</a></li>
+                <li class="nav-item"><a class="nav-link" href="#terminal">Terminal</a></li>
+                <li class="nav-item"><a class="nav-link" href="#analysis">Analysis</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cms-indicator">CMS Pro</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#founder">Founder</a></li>
+            </ul>
+            
+            <div class="nav-actions d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="btn btn-sm" style="border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--gold);">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <a href="#login" class="text-white text-decoration-none small hover-gold"><i class="fas fa-lock me-1"></i> Member Login</a>
+                <a href="#cms-indicator" class="btn btn-gold btn-sm px-4">Get Access</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+    <!-- Split Hero Section -->
+    <section id="home" class="hero-section position-relative d-flex align-items-center">
+        <div class="hero-bg-overlay"></div>
+        <div class="container position-relative z-1 pt-5">
+            <div class="row align-items-center g-5 mt-4">
+                
+                <!-- Left Column: Branding & CTA -->
+                <div class="col-lg-6 text-center text-lg-start pe-lg-5" data-aos="fade-right">
+                    <div class="badge-premium mb-4 d-inline-block">
+                        <i class="fas fa-chess-knight gold-text me-2"></i>Institutional Grade Trading
+                    </div>
+                    <h1 class="display-3 fw-bold text-white font-heading mb-3 lh-sm">
+                        Think Like <span class="gold-text">Institutions.</span>
+                    </h1>
+                    <h2 class="h3 text-gray fw-light mb-4">Trade With Discipline.</h2>
+                    
+                    <ul class="hero-features list-unstyled text-gray mb-5 text-start d-inline-block d-lg-block font-body">
+                        <li><i class="fas fa-check gold-text"></i> Algorithmic Price Action Mastery</li>
+                        <li><i class="fas fa-check gold-text"></i> Liquidity & Order Block Mechanics</li>
+                        <li><i class="fas fa-check gold-text"></i> Unbreakable Risk Management</li>
+                    </ul>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#education" class="btn btn-gold btn-lg"><i class="fas fa-graduation-cap me-2"></i>Start Learning</a>
+                        <a href="#analysis" class="btn btn-outline-light btn-lg"><i class="fas fa-chart-pie me-2"></i>Market Analysis</a>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#cms-indicator" class="text-gold text-decoration-none small hover-underline tracking-wide">
+                            <i class="fas fa-bolt me-1 text-warning"></i> Subscribe CMS Indicator <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Premium Live Dashboard -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-glow"></div>
+                    <div class="glass-panel p-4 rounded-4 shadow-premium border-gradient">
+                        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-satellite-dish gold-text blink"></i>
+                                <span class="terminal-font text-white fw-bold small tracking-widest">CMS LIVE TERMINAL</span>
+                            </div>
+                            <span class="badge bg-dark border border-success text-success terminal-font px-2 py-1">
+                                <span class="pulse-dot bg-success"></span> LIVE DEMO
+                            </span>
+                        </div>
+
+                        <!-- Data Grid -->
+                        <div class="row g-3 terminal-font">
+                            <!-- Simulated Data Cards -->
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">NIFTY 50</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="21500">21,500.00</span>
+                                        <span class="text-success small sim-pct">+0.45%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">BANKNIFTY</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="48200">48,200.00</span>
+                                        <span class="text-danger small sim-pct">-0.12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">GOLD (XAUUSD)</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="gold-text fs-5 fw-bold sim-val" data-base="2045">2,045.50</span>
+                                        <span class="text-success small sim-pct">+0.80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">USDINR</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="83">83.15</span>
+                                        <span class="text-success small sim-pct">+0.05%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Metrics -->
+                        <div class="row g-2 mt-3 text-uppercase small" style="font-size: 0.7rem;">
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Trend</span><span class="text-success fw-bold">BULLISH</span></div></div>
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Liquidity</span><span class="text-warning fw-bold">H. SWEEP</span></div></div>
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Risk</span><span class="text-white fw-bold">RISK-ON</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Edge & Core Competencies -->
+    <section id="edge" class="py-6 border-top border-dark">
+        <div class="container">
+            <div class="text-center mb-6" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">The Difference</span>
+                <h2 class="display-5 fw-bold text-white mt-2 font-heading">Institutional <span class="gold-text">Edge</span></h2>
+                <p class="text-gray mx-auto mt-3 max-w-600">Stop trading retail patterns. Learn to read raw order flow, liquidity mechanics, and structural delivery.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-layer-group gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Market Structure</h4>
+                        <p class="text-gray small mt-3 mb-0">Identify genuine structural shifts versus retail liquidity traps.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-water gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Liquidity Pools</h4>
+                        <p class="text-gray small mt-3 mb-0">Anticipate where institutions will hunt stops to build major positions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-shield-alt gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Risk Mitigation</h4>
+                        <p class="text-gray small mt-3 mb-0">Mathematical models to ensure capital preservation over drawdowns.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-brain gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Trading Psychology</h4>
+                        <p class="text-gray small mt-3 mb-0">Develop a disciplined mindset immune to FOMO and emotional bias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Market Terminal Section -->
+    <section id="terminal" class="py-6 bg-black position-relative">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8" data-aos="fade-right">
+                    <h2 class="display-6 fw-bold text-white font-heading">Global <span class="gold-text">Terminal</span></h2>
+                    <p class="text-gray">Real-time algorithmic strength meters and flow dynamics (Simulation Mode).</p>
+                </div>
+                <div class="col-md-4 text-md-end" data-aos="fade-left">
+                    <span class="badge border border-gold text-gold px-3 py-2"><i class="fas fa-circle text-success blink me-2"></i>SYSTEM ONLINE</span>
+                </div>
+            </div>
+
+            <div class="row g-4 terminal-font">
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-chart-line me-2"></i>CMS Volatility Idx</div>
+                        <div class="fs-2 fw-bold text-white mb-1 counter" data-target="18.45">0</div>
+                        <div class="progress mt-2 bg-black" style="height: 4px;">
+                            <div class="progress-bar bg-warning w-50"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-balance-scale me-2"></i>Inst. Order Flow</div>
+                        <div class="fs-2 fw-bold text-success mb-1 counter" data-target="76.2">0</div>
+                        <span class="small text-gray">% BUY SIDE</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-clock me-2"></i>Avg Trade Hold</div>
+                        <div class="fs-2 fw-bold text-white mb-1">4<span class="fs-5 text-gray">h</span> 12<span class="fs-5 text-gray">m</span></div>
+                        <span class="small text-info">Intraday Mode</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-crosshairs me-2"></i>Algorithm Status</div>
+                        <div class="fs-2 fw-bold gold-text mb-1">HUNTING</div>
+                        <span class="small text-gray">Scanning 50+ Pairs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Analysis (TradingView Placeholders) -->
+    <section id="analysis" class="py-6 border-top border-dark">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">Daily Breakdowns</span>
+                <h2 class="display-6 fw-bold text-white mt-2 font-heading">Market <span class="gold-text">Analysis</span></h2>
+            </div>
+            
+            <div class="row g-4">
+                <!-- TV Placeholder Array -->
+                <script>
+                    const markets = ['Nifty', 'BankNifty', 'Gold', 'Silver', 'Forex', 'Crypto', 'Commodity'];
+                    markets.forEach((market, index) => {
+                        document.write(`
+                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="${index * 50}">
+                            <div class="glass-card h-100 p-0 overflow-hidden d-flex flex-column hover-lift border-gradient">
+                                <div class="tv-placeholder bg-black d-flex flex-column justify-content-center align-items-center position-relative" style="height: 220px;">
+                                    <i class="fas fa-chart-candlestick fa-3x text-secondary opacity-25 mb-3"></i>
+                                    <span class="badge border border-secondary text-gray terminal-font">${market} / TV WIDGET AREA</span>
+                                    <div class="position-absolute top-0 end-0 p-2"><i class="fas fa-expand text-secondary"></i></div>
+                                </div>
+                                <div class="p-4 bg-darker flex-grow-1 d-flex flex-column">
+                                    <h5 class="text-white font-heading">${market} Outlook</h5>
+                                    <p class="text-gray small mb-4 flex-grow-1">Liquidity zones and premium/discount arrays for upcoming sessions.</p>
+                                    <a href="#" class="btn btn-outline-gold w-100 mt-auto small">Read Full Notes</a>
+                                </div>
+                            </div>
+                        </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- CMS Institutional Indicator Section -->
+    <section id="cms-indicator" class="py-7 bg-premium-gradient position-relative overflow-hidden">
+        <div class="bg-grid-overlay"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
+                    <span class="badge bg-gold text-black px-3 py-2 fw-bold tracking-widest mb-4">
+                        <i class="fas fa-lock-open me-2"></i>PREMIUM ALGORITHM
+                    </span>
+                    <h2 class="display-4 fw-bold text-white font-heading lh-sm mb-4">
+                        CMS <span class="gold-text">Institutional</span> Indicator
+                    </h2>
+                    <p class="text-gray lead mb-5">Automate your chart markup. Our proprietary algorithm instantly plots order blocks, fair value gaps, and liquidity sweeps with institutional precision.</p>
+                    
+                    <ul class="list-unstyled text-white mb-5 d-flex flex-column gap-3">
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Auto-detection of Premium/Discount Zones</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Real-time Liquidity Sweep Alerts</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Unmitigated Order Block Highlighting</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Institutional Market Structure Shifts (MSS)</li>
+                    </ul>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#pricing" class="btn btn-gold btn-lg shadow-gold">Subscribe Now</a>
+                        <span class="badge border border-warning text-warning d-flex align-items-center px-4 py-2" style="font-size: 0.9rem;">
+                            V2.0 Coming Soon
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <div class="glass-panel p-2 rounded-4 shadow-premium border-gold position-relative">
+                        <!-- Dashboard Preview Placeholder -->
+                        <div class="bg-black rounded-3 p-4 border border-dark position-relative overflow-hidden" style="min-height: 400px;">
+                            <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary">
+                                <span class="text-white terminal-font small">CMS PRO // ALGO ENGINE</span>
+                                <i class="fas fa-cog text-gray hover-spin"></i>
+                            </div>
+                            <!-- Mock Chart Lines -->
+                            <div class="mock-chart">
+                                <div class="chart-line text-danger" style="top: 20%; width: 60%;"></div>
+                                <span class="chart-label text-danger small terminal-font position-absolute" style="top: 15%; right: 5%;">BEARISH OB</span>
+                                
+                                <div class="chart-box bg-gold-transparent border border-gold border-opacity-50 position-absolute" style="top: 40%; left: 30%; width: 40%; height: 60px;"></div>
+                                <span class="chart-label gold-text small terminal-font position-absolute" style="top: 45%; left: 45%;">FVG</span>
+                                
+                                <div class="chart-line text-success" style="bottom: 20%; width: 80%;"></div>
+                                <span class="chart-label text-success small terminal-font position-absolute" style="bottom: 22%; right: 5%;">BULLISH OB</span>
+                                
+                                <!-- Mock Candlesticks via CSS -->
+                                <div class="mock-candles"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Plans -->
+            <div id="pricing" class="row g-4 mt-6 justify-content-center">
+                <!-- Basic Plan -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-5 h-100 text-center border-secondary hover-lift">
+                        <h4 class="text-white font-heading mb-2">Quarterly</h4>
+                        <h2 class="text-gray mb-4">₹5,999<span class="fs-6 fw-light">/3mo</span></h2>
+                        <ul class="list-unstyled text-start text-gray mb-5 mx-auto" style="max-width: 200px;">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Basic Indicator Set</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Chart Breakdowns</li>
+                            <li class="mb-3"><i class="fas fa-times text-danger me-2"></i> VIP Community</li>
+                        </ul>
+                        <button class="btn btn-outline-light w-100">Select Plan</button>
+                    </div>
+                </div>
+                <!-- Pro Plan -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-5 h-100 text-center border-gold shadow-gold position-relative transform-scale-105 z-2">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-gold text-black px-3 py-2 fw-bold tracking-widest">MOST POPULAR</div>
+                        <h4 class="text-white font-heading mb-2 mt-3">Annual Pro</h4>
+                        <h2 class="gold-text mb-4">₹18,999<span class="fs-6 text-gray fw-light">/yr</span></h2>
+                        <ul class="list-unstyled text-start text-white mb-5 mx-auto" style="max-width: 200px;">
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> Full CMS Indicator</li>
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> All Market Scanners</li>
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> VIP Community Access</li>
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> Priority Support</li>
+                        </ul>
+                        <button class="btn btn-gold w-100">Subscribe Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Roadmap -->
+    <section id="education" class="py-6 border-top border-dark">
+        <div class="container">
+            <div class="text-center mb-6" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">Curriculum</span>
+                <h2 class="display-6 fw-bold text-white mt-2 font-heading">Learning <span class="gold-text">Roadmap</span></h2>
+            </div>
+
+            <div class="roadmap-timeline position-relative px-3 mx-auto" style="max-width: 800px;">
+                <!-- Line -->
+                <div class="position-absolute bg-secondary opacity-25" style="left: 20px; top: 0; bottom: 0; width: 2px;"></div>
+                
+                <!-- Steps -->
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">1. Trading Psychology</h4>
+                    <p class="text-gray small">Rewire your brain. Eliminate FOMO, revenge trading, and emotional attachment to capital.</p>
+                </div>
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">2. Unbreakable Risk Management</h4>
+                    <p class="text-gray small">Position sizing, equity preservation, and understanding asymmetric risk-to-reward ratios.</p>
+                </div>
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right" data-aos-delay="200">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">3. Institutional Concepts (SMC)</h4>
+                    <p class="text-gray small">Order Blocks, Fair Value Gaps, Inducement, and true Market Structure shifts.</p>
+                </div>
+                <div class="roadmap-item position-relative ps-5" data-aos="fade-right" data-aos-delay="300">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">4. Algorithmic Price Action</h4>
+                    <p class="text-gray small">Blending concepts into a mechanical, rules-based trading plan using the CMS framework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM FOUNDER SECTION (Typography Only, No Images) -->
+    <section id="founder" class="py-7 bg-black position-relative border-top border-bottom border-gold border-opacity-25">
+        <div class="container position-relative z-1">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <h6 class="gold-text tracking-widest text-uppercase small mb-3">The Visionary Behind Capital Mindset</h6>
+                    <h2 class="display-3 fw-bold text-white font-heading mb-4 border-bottom border-secondary border-opacity-50 pb-4 d-inline-block">Amit Deshmukh</h2>
+                </div>
+            </div>
+            
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="founder-quote p-4 border-start border-4 border-gold">
+                        <i class="fas fa-quote-left fa-2x gold-text opacity-50 mb-3"></i>
+                        <h3 class="text-white font-heading lh-base fst-italic mb-4">"Trading is not about predicting the next candle. It is the ruthless execution of a proven statistical edge while protecting capital at all costs."</h3>
+                        <p class="text-gray terminal-font small tracking-wide text-uppercase mb-0">— Founder, Capital Mindset</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="glass-panel p-5 rounded bg-dark border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-center">
+                        <div class="mb-4">
+                            <h5 class="text-white font-heading d-flex align-items-center gap-2"><i class="fas fa-clock gold-text"></i> 10+ Years Market Experience</h5>
+                            <p class="text-gray small mt-2">Transitioning from retail speculation to institutional execution, mastering the mechanics of raw order flow and liquidity.</p>
+                        </div>
+                        <div class="mb-4">
+                            <h5 class="text-white font-heading d-flex align-items-center gap-2"><i class="fas fa-bullseye gold-text"></i> The Mission</h5>
+                            <p class="text-gray small mt-2">To build an elite collective of disciplined traders equipped with institutional knowledge, eradicating retail trading myths.</p>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-heading d-flex align-items-center gap-2"><i class="fas fa-shield-halved gold-text"></i> Trading Philosophy</h5>
+                            <p class="text-gray small mt-2 mb-0">Capital preservation supersedes capital appreciation. A rigorous, mechanical approach to market structure.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Free Resources -->
+    <section id="resources" class="py-6 border-bottom border-dark">
+        <div class="container">
+            <h2 class="text-center text-white display-6 fw-bold font-heading mb-5" data-aos="fade-up">Premium <span class="gold-text">Resources</span></h2>
+            <div class="row g-4 justify-content-center">
+                <script>
+                    const resources = [
+                        { icon: 'fa-file-pdf', title: 'CMS E-Books', desc: 'Institutional Concepts' },
+                        { icon: 'fa-clipboard-check', title: 'Trading Checklist', desc: 'Pre-Trade Routine' },
+                        { icon: 'fa-book-open', title: 'Trading Journal', desc: 'Track & Improve' },
+                        { icon: 'fa-video', title: 'Video Vault', desc: 'Archived Sessions' }
+                    ];
+                    resources.forEach((res, index) => {
+                        document.write(`
+                        <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="${index * 100}">
+                            <a href="#" class="glass-card p-4 text-center d-block text-decoration-none hover-glow border-gradient rounded">
+                                <i class="fas ${res.icon} fa-2x gold-text mb-3 resource-icon"></i>
+                                <h6 class="text-white font-heading mb-1">${res.title}</h6>
+                                <span class="text-gray small">${res.desc}</span>
+                                <div class="mt-3"><span class="badge bg-dark border border-secondary text-gray">Download</span></div>
+                            </a>
+                        </div>
+                        `);
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium FAQ -->
+    <section id="faq" class="py-6 bg-black">
+        <div class="container">
+            <h2 class="text-center text-white display-6 fw-bold font-heading mb-5" data-aos="fade-up">Frequently Asked <span class="gold-text">Questions</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8" data-aos="fade-up">
+                    <div class="accordion custom-accordion" id="faqAccordion">
+                        <!-- FAQ Items -->
+                        <div class="accordion-item mb-3 bg-transparent border border-secondary border-opacity-50 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white fw-bold font-heading" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Does the CMS Indicator repaint?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-gray small bg-black">
+                                    No. Our algorithmic rules process confirmed candle closes. Order blocks and FVGs remain static once printed.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 bg-transparent border border-secondary border-opacity-50 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white fw-bold font-heading" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you provide account management or tips?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-gray small bg-black">
+                                    Absolutely not. Capital Mindset is an educational platform. We teach you how to fish. We do not provide financial advice or handle client funds.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 bg-transparent border border-secondary border-opacity-50 rounded">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark text-white fw-bold font-heading" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What markets does this strategy work on?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body text-gray small bg-black">
+                                    Institutional concepts apply universally to any highly liquid market, including Nifty, BankNifty, Forex, Crypto, and Commodities.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Contact -->
+    <section id="contact" class="py-6 border-top border-dark">
+        <div class="container">
+            <h2 class="text-center text-white display-6 fw-bold font-heading mb-5" data-aos="fade-up">Contact <span class="gold-text">Support</span></h2>
+            
+            <div class="row g-5 align-items-stretch">
+                <!-- Contact Form -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="glass-panel p-5 h-100 rounded border-gradient">
+                        <h4 class="text-white font-heading mb-4">Send a Message</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-12"><input type="text" class="form-control premium-input" placeholder="Full Name" required></div>
+                                <div class="col-12"><input type="email" class="form-control premium-input" placeholder="Email Address" required></div>
+                                <div class="col-12"><textarea class="form-control premium-input" rows="4" placeholder="How can we assist you?" required></textarea></div>
+                                <div class="col-12"><button type="submit" class="btn btn-gold w-100 py-2 text-uppercase tracking-widest fw-bold">Submit</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Info & Map -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="d-flex flex-column h-100 gap-4">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <a href="#" class="glass-card p-4 text-center d-block text-decoration-none hover-glow border-gradient rounded h-100">
+                                    <i class="fab fa-whatsapp fa-2x text-success mb-2"></i>
+                                    <h6 class="text-white mb-0">WhatsApp</h6>
+                                    <span class="text-gray small">Message Us</span>
+                                </a>
+                            </div>
+                            <div class="col-sm-6">
+                                <a href="#" class="glass-card p-4 text-center d-block text-decoration-none hover-glow border-gradient rounded h-100">
+                                    <i class="fab fa-telegram-plane fa-2x text-info mb-2"></i>
+                                    <h6 class="text-white mb-0">Telegram</h6>
+                                    <span class="text-gray small">Join Channel</span>
+                                </a>
+                            </div>
+                            <div class="col-12">
+                                <a href="#" class="glass-card p-4 text-center d-block text-decoration-none hover-glow border-gradient rounded">
+                                    <i class="fas fa-envelope fa-2x gold-text mb-2"></i>
+                                    <h6 class="text-white mb-0">support@capitalmindset.com</h6>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="map-placeholder flex-grow-1 bg-dark rounded border border-secondary border-opacity-50 d-flex flex-column justify-content-center align-items-center text-center p-4">
+                            <i class="fas fa-map-marked-alt fa-3x text-secondary opacity-50 mb-3"></i>
+                            <h6 class="text-gray font-heading">Global Headquarters Placeholder</h6>
+                            <span class="text-secondary small terminal-font">Google Maps API Future Integration</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="bg-black pt-6 pb-4 border-top border-gold border-opacity-50 position-relative">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <!-- Branding -->
+                <div class="col-lg-4">
+                    <h3 class="gold-text fw-bold text-uppercase brand-text font-heading mb-3">Capital Mindset</h3>
+                    <p class="text-gray small mb-4 pe-lg-4 lh-lg">Founded by Amit Deshmukh. The premier destination for algorithmic price action and institutional trading logic.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white font-heading mb-4 fs-6 text-uppercase tracking-widest">Platform</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#home">Terminal</a></li>
+                        <li><a href="#analysis">Analysis</a></li>
+                        <li><a href="#cms-indicator">Indicator</a></li>
+                        <li><a href="#education">Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white font-heading mb-4 fs-6 text-uppercase tracking-widest">Support</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-lg-4">
+                    <h5 class="text-white font-heading mb-4 fs-6 text-uppercase tracking-widest">Newsletter</h5>
+                    <p class="text-gray small mb-3">Get institutional chart breakdowns weekly.</p>
+                    <form class="d-flex position-relative">
+                        <input type="email" class="form-control premium-input pe-5 rounded-pill" placeholder="Email Address">
+                        <button type="submit" class="btn btn-gold rounded-pill position-absolute end-0 h-100 px-4"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <hr class="border-secondary opacity-25">
+            
+            <!-- Strict Legal -->
+            <div class="text-center mt-4">
+                <p class="text-danger small fw-bold text-uppercase tracking-wide mb-2"><i class="fas fa-triangle-exclamation me-1"></i> Strict Risk Disclaimer</p>
+                <p class="text-muted mx-auto mb-4" style="max-width: 900px; font-size: 0.7rem; line-height: 1.6;">
+                    Educational Purpose Only: Capital Mindset and Amit Deshmukh do not provide financial advice, tips, or portfolio management. Trading in financial markets carries a high degree of risk and is not suitable for all investors. Past performance is not indicative of future results. No Guaranteed Returns are promised.
+                </p>
+                <div class="d-flex justify-content-center gap-3 small mb-3 text-gray">
+                    <a href="#" class="text-gray text-decoration-none hover-gold">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#" class="text-gray text-decoration-none hover-gold">Terms of Service</a>
+                    <span>|</span>
+                    <a href="#" class="text-gray text-decoration-none hover-gold">Cookies</a>
+                </div>
+                <p class="text-secondary small mb-0">&copy; <span id="year"></span> Capital Mindset by Amit Deshmukh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
