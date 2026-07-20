@@ -1,315 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Premium FinTech SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & Advanced Meta Tags -->
     <title>Capital Mindset | Institutional Trading Intelligence Platform</title>
     <meta name="description" content="Access CMS Pro, the premium institutional trading intelligence platform built for serious traders. Track Smart Money Concepts, Order Blocks, and Liquidity zones.">
-    <meta name="keywords" content="Capital Mindset, CMS Pro, Institutional Trading, Smart Money Concepts, TradingView Indicator, Order Blocks, Nifty Analysis">
-    <meta name="author" content="Capital Mindset">
+    <meta name="keywords" content="Capital Mindset, Amit Deshmukh, Institutional Trading, Price Action, CMS Indicator, Nifty Analysis, TradingView, Smart Money Concepts">
+    <meta name="author" content="Amit Deshmukh | Capital Mindset">
     <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a0a">
     
-    <!-- Canonical URL & Favicon -->
+    <!-- Canonical & Favicon -->
     <link rel="canonical" href="https://capitalmindset.co.in/">
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- Open Graph / Facebook -->
+    <link rel="icon" href="logo.png" type="image/png">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Capital Mindset | Institutional Edge">
+    <meta property="og:description" content="Master the markets with institutional concepts, advanced risk management, and the CMS Indicator.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://capitalmindset.co.in">
-    <meta property="og:title" content="Capital Mindset | Institutional Trading Intelligence Platform">
-    <meta property="og:description" content="Advanced analytical tools and algorithmic decision-support for professional market participants.">
+    <meta property="og:url" content="https://capitalmindset.co.in/">
     <meta property="og:image" content="https://capitalmindset.co.in/logo.png">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Capital Mindset | Institutional Edge">
+    <meta name="twitter:description" content="Think Like Institutions. Trade With Discipline.">
+    <meta name="twitter:image" content="https://capitalmindset.co.in/logo.png">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://capitalmindset.co.in">
-    <meta property="twitter:title" content="Capital Mindset | Institutional Trading Intelligence">
-    <meta property="twitter:description" content="Advanced analytical tools based on Smart Money Logic.">
-    <meta property="twitter:image" content="https://capitalmindset.co.in/logo.png">
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "CMS Pro Indicator",
+      "applicationCategory": "FinanceApplication",
+      "url": "https://capitalmindset.co.in",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Capital Mindset",
+        "founder": {
+          "@type": "Person",
+          "name": "Amit Deshmukh"
+        }
+      }
+    }
+    </script>
 
-    <!-- Fonts & Third-Party Library CDNs -->
+    <!-- Fonts (Preloaded for Performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Frameworks -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Core Custom Stylesheet -->
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-darker">
+<body class="dark-theme">
 
-    <!-- Scroll Progress Tracker -->
+    <!-- Scroll Progress Bar -->
     <div class="scroll-progress-container">
         <div class="scroll-progress-bar" id="scrollBar"></div>
     </div>
 
-    <!-- App System Loader -->
-    <div id="loader" class="loader-wrapper" aria-live="polite">
-        <div class="text-center">
-            <div class="cms-logo-spinner mx-auto mb-3">CM</div>
-            <p id="loader-text" class="terminal-font text-gold small tracking-widest">Loading Institutional Data... 0%</p>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="cms-logo-spinner mb-4 mx-auto">CM</div>
+            <h4 class="gold-text font-heading text-uppercase tracking-widest mb-2 text-center">Capital Mindset</h4>
+            <p class="text-gray small terminal-font text-center" id="loader-text">Loading Institutional Data... 0%</p>
         </div>
     </div>
 
-    <!-- Navigation Header -->
-    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top glass-nav" aria-label="Main Navigation">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="logo.png" alt="Capital Mindset Logo" class="nav-logo me-2" loading="lazy">
+    <!-- Premium Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top glass-nav" id="mainNav">
+        <div class="container align-items-center">
+            <!-- Logo and Brand -->
+            <a class="navbar-brand d-flex align-items-center gap-2 custom-brand" href="#home">
+                <img src="logo.png" class="nav-logo" alt="Capital Mindset Logo" loading="lazy">
+                <span class="gold-text fw-bold text-uppercase brand-text font-heading">Capital Mindset</span>
             </a>
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars text-gold"></i>
+            
+            <!-- Toggle for Mobile -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars gold-text"></i>
             </button>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link font-body tracking-wide" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link font-body tracking-wide" href="#terminal">Terminal</a></li>
-                    <li class="nav-item"><a class="nav-link font-body tracking-wide" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link font-body tracking-wide" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                        <button id="theme-toggle" class="btn btn-outline-gold px-3" aria-label="Toggle light and dark theme">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a href="#pricing" class="btn btn-gold text-dark font-body fw-bold tracking-wide">Access CMS Pro</a>
-                    </li>
+                <ul class="navbar-nav mx-auto text-uppercase small fw-bold tracking-wide">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#edge">Edge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#terminal">Terminal</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cms-indicator">CMS Pro</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#workflow">Workflow</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
                 </ul>
+                
+                <div class="nav-actions d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="btn btn-sm" style="border-radius: 50%; width: 40px; height: 40px; border: 1px solid var(--gold);">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#pricing" class="btn btn-gold btn-sm px-4 fw-bold">Get CMS Pro</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Showcase Section -->
-    <section class="hero-section position-relative d-flex align-items-center py-7">
+    <!-- Split Hero Section -->
+    <section id="home" class="hero-section position-relative d-flex align-items-center">
         <div class="hero-bg-overlay"></div>
-        <div class="hero-glow"></div>
-        <div class="container position-relative z-index-1 mt-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <span class="badge-premium mb-3 d-inline-block"><i class="fas fa-terminal me-2"></i>Institutional Intelligence</span>
-                    <h1 class="display-3 font-heading fw-bold mb-4">
-                        Decode the Markets with <span class="gold-text">CMS Pro Terminal</span>
-                    </h1>
-                    <p class="lead text-gray mb-5 max-w-600 font-body">
-                        Capital Mindset delivers a premium SaaS analytical platform built specifically for serious traders. Track real-time Smart Money footprints, map algorithmic liquidity pools, and discover institutional order flow patterns.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#pricing" class="btn btn-gold btn-lg text-dark fw-bold px-5">Get CMS Pro</a>
-                        <a href="#terminal" class="btn btn-outline-light btn-lg px-4"><i class="fas fa-network-wired me-2"></i>Launch Terminal</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
-                    <div class="glass-panel p-4 rounded-4 shadow-premium border-gradient position-relative transform-scale-105">
-                        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
-                            <h5 class="text-white m-0 terminal-font"><i class="fas fa-circle text-success pulse-dot me-2"></i>CMS Intelligence Engine</h5>
-                            <span class="text-gray small terminal-font">v2.0 Active</span>
-                        </div>
-                        <ul class="list-unstyled hero-features text-gray terminal-font mb-0">
-                            <li class="d-flex justify-content-between mb-3"><span>AI Confidence Matrix</span> <span class="text-white fw-bold">94.8%</span></li>
-                            <li class="d-flex justify-content-between mb-3"><span>Trend Strength Index</span> <span class="text-success fw-bold">Bullish Extension</span></li>
-                            <li class="d-flex justify-content-between mb-3"><span>Market Structural Phase</span> <span class="text-white">Institutional Re-Accumulation</span></li>
-                            <li class="d-flex justify-content-between mb-3"><span>Signal Cluster Quality</span> <span class="gold-text fw-bold">High Probability</span></li>
-                            <li class="d-flex justify-content-between"><span>Engine Diagnostics</span> <span class="text-muted small">Updated 2s ago</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SaaS Ecosystem Features Section -->
-    <section id="features" class="py-6 bg-premium-gradient position-relative">
-        <div class="bg-grid-overlay"></div>
-        <div class="container position-relative">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="font-heading h1 mb-3">Built For <span class="gold-text">High-Performance</span> Trading</h2>
-                <p class="text-gray font-body max-w-600 mx-auto">Eliminate guesswork. Leverage data-driven software tools designed to streamline structural market analysis.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-4 rounded-4 h-100 hover-lift border-top-gradient">
-                        <i class="fas fa-project-diagram fs-1 gold-text mb-4"></i>
-                        <h4 class="text-white font-heading mb-3">Smart Money Logic</h4>
-                        <p class="text-gray font-body small">Tracks institutional footsteps by identifying critical market structure shifts and algorithmic manipulation voids across multi-asset classes.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card p-4 rounded-4 h-100 hover-lift border-top-gradient">
-                        <i class="fas fa-cubes fs-1 gold-text mb-4"></i>
-                        <h4 class="text-white font-heading mb-3">Order Block Analytics</h4>
-                        <p class="text-gray font-body small">Automatically pinpoints high-probability unmitigated order blocks where major financial institutions leave order imbalances.</p>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-4 rounded-4 h-100 hover-lift border-top-gradient">
-                        <i class="fas fa-sliders-h fs-1 gold-text mb-4"></i>
-                        <h4 class="text-white font-heading mb-3">TradingView Integration</h4>
-                        <p class="text-gray font-body small">Deploys instantly onto your active TradingView charts. Built with zero-lag script optimization supporting Nifty, BankNifty, and Forex.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Interactive Live Terminal Section Layout -->
-    <section id="terminal" class="py-6 position-relative">
-        <div class="container">
-            <div class="glass-panel p-4 rounded-4 shadow-premium border-gradient">
-                <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
-                    <h3 class="font-heading text-white mb-2 mb-md-0"><span class="gold-text">CMS Terminal</span> Data Feed</h3>
-                    <div class="terminal-font small text-gray">
-                        <span class="badge bg-success-dim text-success border border-success me-2"><i class="fas fa-circle pulse-dot me-1"></i>Live Stream</span>
-                        System Feed Tick
-                    </div>
-                </div>
+        <div class="container position-relative z-1 pt-5">
+            <div class="row align-items-center g-5 mt-4">
                 
-                <div class="table-responsive">
-                    <table class="table table-dark table-borderless align-middle terminal-font mb-0" style="background: transparent;">
-                        <thead>
-                            <tr class="text-muted border-bottom border-secondary small">
-                                <th>ASSET CLASS</th>
-                                <th>SPOT PRICE</th>
-                                <th>NET CHANGE</th>
-                                <th>ANALYSIS STATE</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="text-white fw-bold">NIFTY 50</td>
-                                <td><span id="nifty-price" class="sim-val fw-bold" data-base="24250.80">24,250.80</span></td>
-                                <td><span id="nifty-change" class="sim-pct text-success small">+0.12%</span></td>
-                                <td><span class="badge bg-dark border border-warning text-gold px-3">Liquidity Swept</span></td>
-                            </tr>
-                            <tr>
-                                <td class="text-white fw-bold">BANK NIFTY</td>
-                                <td><span id="banknifty-price" class="sim-val fw-bold" data-base="52410.50">52,410.50</span></td>
-                                <td><span id="banknifty-change" class="sim-pct text-danger small">-0.08%</span></td>
-                                <td><span class="badge bg-dark border border-secondary text-gray px-3">Mitigation Phase</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Left Column: Branding & CTA -->
+                <div class="col-lg-6 text-center text-lg-start pe-lg-5" data-aos="fade-right">
+                    <div class="badge-premium mb-4 d-inline-block">
+                        <i class="fas fa-satellite-dish gold-text me-2"></i>Institutional Trading Engine
+                    </div>
+                    <h1 class="display-3 fw-bold text-white font-heading mb-3 lh-sm">
+                        Think Like <span class="gold-text">Institutions.</span>
+                    </h1>
+                    <h2 class="h3 text-gray fw-light mb-4">Execute With Precision.</h2>
+                    
+                    <ul class="hero-features list-unstyled text-gray mb-5 text-start d-inline-block d-lg-block font-body">
+                        <li><i class="fas fa-check gold-text"></i> Smart Money Logic & Detection</li>
+                        <li><i class="fas fa-check gold-text"></i> Algorithmic Liquidity Mapping</li>
+                        <li><i class="fas fa-check gold-text"></i> High-Probability Order Blocks</li>
+                    </ul>
+                    
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#pricing" class="btn btn-gold btn-lg text-dark fw-bold"><i class="fas fa-bolt me-2"></i>Deploy CMS Pro</a>
+                        <a href="#terminal" class="btn btn-outline-light btn-lg"><i class="fas fa-chart-line me-2"></i>Live Terminal</a>
+                    </div>
                 </div>
-                <!-- Disclaimer for Terminal Simulation -->
-                <div class="text-gray small mt-4 fst-italic terminal-font opacity-75">
-                    * Demo Interface – Values shown are simulated for demonstration purposes and do not represent live market data.
+
+                <!-- Right Column: Premium Live Dashboard -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-glow"></div>
+                    <div class="glass-panel p-4 rounded-4 shadow-premium border-gradient">
+                        <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary pb-3">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-satellite-dish gold-text blink"></i>
+                                <span class="terminal-font text-white fw-bold small tracking-widest">CMS LIVE TERMINAL</span>
+                            </div>
+                            <span class="badge bg-dark border border-success text-success terminal-font px-2 py-1">
+                                <span class="pulse-dot bg-success"></span> LIVE DEMO
+                            </span>
+                        </div>
+
+                        <!-- Data Grid -->
+                        <div class="row g-3 terminal-font">
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">NIFTY 50</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="24250.80">24,250.80</span>
+                                        <span class="text-success small sim-pct">+0.12%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">BANKNIFTY</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="52410.50">52,410.50</span>
+                                        <span class="text-danger small sim-pct">-0.08%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">GOLD (XAUUSD)</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="gold-text fs-5 fw-bold sim-val" data-base="2345.20">2,345.20</span>
+                                        <span class="text-success small sim-pct">+0.45%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="data-card p-3 rounded-3 bg-black border border-dark">
+                                    <span class="text-gray small d-block mb-1">BTCUSD</span>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                        <span class="text-white fs-5 fw-bold sim-val" data-base="64200.00">64,200.00</span>
+                                        <span class="text-danger small sim-pct">-1.20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Technical Metrics -->
+                        <div class="row g-2 mt-3 text-uppercase small" style="font-size: 0.7rem;">
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Trend</span><span class="text-success fw-bold">BULLISH</span></div></div>
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Liquidity</span><span class="text-warning fw-bold">SWEPT</span></div></div>
+                            <div class="col-4"><div class="metric-box p-2 bg-dark rounded border border-secondary border-opacity-25"><span class="text-gray d-block">Algo State</span><span class="text-white fw-bold">ACTIVE</span></div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Monetization & Tier Plans -->
-    <section id="pricing" class="py-6 bg-darker">
+    <!-- Institutional Edge -->
+    <section id="edge" class="py-6 border-top border-dark">
         <div class="container">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <h2 class="font-heading h1 mb-3">Premium <span class="gold-text">Terminal Plans</span></h2>
-                <p class="text-gray font-body">Select your license tier. Scaled to empower standalone professional accounts. (Prices exclude 18% GST)</p>
+            <div class="text-center mb-6" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">The Difference</span>
+                <h2 class="display-5 fw-bold text-white mt-2 font-heading">Institutional <span class="gold-text">Edge</span></h2>
+                <p class="text-gray mx-auto mt-3 max-w-600">Stop trading retail patterns. Learn to read raw order flow, liquidity mechanics, and structural delivery.</p>
             </div>
-            
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-layer-group gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Market Structure</h4>
+                        <p class="text-gray small mt-3 mb-0">Identify genuine structural shifts versus retail liquidity traps.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-water gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Liquidity Pools</h4>
+                        <p class="text-gray small mt-3 mb-0">Anticipate where institutions will hunt stops to build major positions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-cubes gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">Order Blocks</h4>
+                        <p class="text-gray small mt-3 mb-0">Automatically detect unmitigated zones where smart money left footprints.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="glass-card p-4 h-100 text-center hover-glow border-top-gradient">
+                        <div class="icon-wrapper mb-4 mx-auto"><i class="fas fa-desktop gold-text fs-3"></i></div>
+                        <h4 class="text-white h5">TV Integration</h4>
+                        <p class="text-gray small mt-3 mb-0">Deploys seamlessly onto your TradingView charts with zero lag.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Market Terminal Section -->
+    <section id="terminal" class="py-6 bg-black position-relative">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-md-8" data-aos="fade-right">
+                    <h2 class="display-6 fw-bold text-white font-heading">Global <span class="gold-text">Terminal</span></h2>
+                    <p class="text-gray">Real-time algorithmic strength meters and flow dynamics.</p>
+                </div>
+                <div class="col-md-4 text-md-end" data-aos="fade-left">
+                    <span class="badge border border-gold text-gold px-3 py-2"><i class="fas fa-circle text-success blink me-2"></i>SYSTEM ONLINE</span>
+                </div>
+            </div>
+
+            <div class="row g-4 terminal-font">
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-chart-line me-2"></i>CMS Volatility Idx</div>
+                        <div class="fs-2 fw-bold text-white mb-1 counter" data-target="18.45">0</div>
+                        <div class="progress mt-2 bg-black" style="height: 4px;">
+                            <div class="progress-bar bg-warning w-50"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-balance-scale me-2"></i>Inst. Order Flow</div>
+                        <div class="fs-2 fw-bold text-success mb-1 counter" data-target="76.2">0</div>
+                        <span class="small text-gray">% BUY SIDE</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-clock me-2"></i>Trend Strength</div>
+                        <div class="fs-2 fw-bold text-white mb-1">HIGH</div>
+                        <span class="small text-info">Momentum Building</span>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-dark rounded border border-secondary border-opacity-50 h-100">
+                        <div class="text-gray small text-uppercase mb-3"><i class="fas fa-crosshairs me-2"></i>Algorithm Status</div>
+                        <div class="fs-2 fw-bold gold-text mb-1">HUNTING</div>
+                        <span class="small text-gray">Scanning 50+ Pairs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-gray small mt-4 fst-italic terminal-font opacity-75 text-end">
+                * Demo Interface – Values shown are simulated algorithmic outputs for demonstration purposes.
+            </div>
+        </div>
+    </section>
+
+    <!-- CMS Institutional Indicator Section -->
+    <section id="cms-indicator" class="py-7 bg-premium-gradient position-relative overflow-hidden">
+        <div class="bg-grid-overlay"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start" data-aos="fade-right">
+                    <span class="badge bg-gold text-black px-3 py-2 fw-bold tracking-widest mb-4">
+                        <i class="fas fa-lock-open me-2"></i>PREMIUM SOFTWARE
+                    </span>
+                    <h2 class="display-4 fw-bold text-white font-heading lh-sm mb-4">
+                        CMS <span class="gold-text">Institutional</span> Indicator
+                    </h2>
+                    <p class="text-gray lead mb-5">Automate your chart markup. Our proprietary algorithm instantly plots order blocks, fair value gaps, and liquidity sweeps with institutional precision.</p>
+                    
+                    <ul class="list-unstyled text-white mb-5 d-flex flex-column gap-3">
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Auto-detection of Premium/Discount Zones</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Real-time Liquidity Sweep Alerts</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Unmitigated Order Block Highlighting</li>
+                        <li><i class="fas fa-check-circle gold-text me-3 fs-5"></i> Institutional Market Structure Shifts (MSS)</li>
+                    </ul>
+
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="#pricing" class="btn btn-gold btn-lg shadow-gold text-dark fw-bold">Get Access Now</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <div class="glass-panel p-2 rounded-4 shadow-premium border-gold position-relative">
+                        <!-- Dashboard Preview -->
+                        <div class="bg-black rounded-3 p-4 border border-dark position-relative overflow-hidden" style="min-height: 400px;">
+                            <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-secondary">
+                                <span class="text-white terminal-font small">CMS PRO // ALGO ENGINE</span>
+                                <i class="fas fa-cog text-gray hover-spin"></i>
+                            </div>
+                            <div class="mock-chart">
+                                <div class="chart-line text-danger" style="top: 20%; width: 60%;"></div>
+                                <span class="chart-label text-danger small terminal-font position-absolute" style="top: 15%; right: 5%;">BEARISH OB</span>
+                                
+                                <div class="chart-box bg-gold-transparent border border-gold border-opacity-50 position-absolute" style="top: 40%; left: 30%; width: 40%; height: 60px;"></div>
+                                <span class="chart-label gold-text small terminal-font position-absolute" style="top: 45%; left: 45%;">FVG</span>
+                                
+                                <div class="chart-line text-success" style="bottom: 20%; width: 80%;"></div>
+                                <span class="chart-label text-success small terminal-font position-absolute" style="bottom: 22%; right: 5%;">BULLISH OB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans (Updated to 4 Plans with + 18% GST) -->
+    <section id="pricing" class="py-7 bg-black border-top border-dark">
+        <div class="container">
+            <div class="text-center mb-6" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">Choose Your License</span>
+                <h2 class="display-5 fw-bold text-white mt-2 font-heading">Software <span class="gold-text">Pricing</span></h2>
+                <p class="text-gray mx-auto mt-3">Transparent pricing for serious traders.</p>
+            </div>
+
             <div class="row g-4 justify-content-center align-items-stretch">
-                <!-- Tier 1: Early Bird Launch Special -->
+                <!-- Early Bird -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                    <div class="glass-card p-4 h-100 text-center border-secondary hover-lift d-flex flex-column">
+                        <span class="badge bg-danger mb-3 mx-auto">First 50 Users</span>
+                        <h4 class="text-white font-heading mb-2">Early Bird</h4>
+                        <h2 class="gold-text mb-1">₹999</h2>
+                        <div class="text-muted small mb-4">+ 18% GST</div>
+                        <p class="text-gray small border-bottom border-secondary pb-3">Single Month Trial</p>
+                        <ul class="list-unstyled text-start text-gray mb-4 mx-auto flex-grow-1" style="max-width: 200px; font-size: 0.9rem;">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Full CMS Indicator</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> TradingView Access</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Standard Support</li>
+                        </ul>
+                        <button class="btn btn-outline-light w-100 mt-auto">Select</button>
+                    </div>
+                </div>
+
+                <!-- Monthly -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="glass-card p-4 rounded-4 text-center d-flex flex-column h-100 hover-glow">
-                        <span class="badge bg-danger text-white mb-3 mx-auto px-3 py-1">First 50 Users Only</span>
-                        <h4 class="text-white mb-2">Early Access Offer</h4>
-                        <div class="my-3">
-                            <h2 class="gold-text display-5 fw-bold mb-0">₹999</h2>
-                            <span class="text-muted small">Single Billing License</span>
-                        </div>
-                        <hr class="border-secondary my-3">
-                        <ul class="list-unstyled text-gray small text-start mb-4 flex-grow-1">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full Access: CMS Pro Suite</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>1 Month Script License Validity</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Standard Telegram Community</li>
+                    <div class="glass-card p-4 h-100 text-center border-secondary hover-lift d-flex flex-column">
+                        <h4 class="text-white font-heading mb-2 mt-4">Monthly</h4>
+                        <h2 class="text-white mb-1">₹2,500<span class="fs-6 fw-light text-gray">/mo</span></h2>
+                        <div class="text-muted small mb-4">+ 18% GST</div>
+                        <p class="text-gray small border-bottom border-secondary pb-3">Per Month Renewal</p>
+                        <ul class="list-unstyled text-start text-gray mb-4 mx-auto flex-grow-1" style="max-width: 200px; font-size: 0.9rem;">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Full CMS Indicator</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Standard Updates</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Email Support</li>
                         </ul>
-                        <a href="#" class="btn btn-outline-gold w-100 mt-auto">Secure Spot</a>
+                        <button class="btn btn-outline-light w-100 mt-auto">Subscribe</button>
                     </div>
                 </div>
 
-                <!-- Tier 2: Monthly Professional Pack -->
+                <!-- Quarterly (Popular) -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="glass-card p-4 rounded-4 text-center d-flex flex-column h-100 hover-glow">
-                        <h4 class="text-white mb-2">Monthly License</h4>
-                        <div class="my-3">
-                            <h2 class="gold-text display-5 fw-bold mb-0">₹2,500</h2>
-                            <span class="text-muted small">Per Month Renewal</span>
-                        </div>
-                        <hr class="border-secondary my-3">
-                        <ul class="list-unstyled text-gray small text-start mb-4 flex-grow-1">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full CMS Pro Analytical Tool</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>TradingView Chart Deployment</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Standard Infrastructure Support</li>
+                    <div class="glass-card p-4 h-100 text-center border-gold shadow-gold position-relative transform-scale-105 z-2 d-flex flex-column">
+                        <div class="position-absolute top-0 start-50 translate-middle badge bg-gold text-black px-3 py-1 fw-bold tracking-widest small">MOST POPULAR</div>
+                        <h4 class="text-white font-heading mb-2 mt-4">Quarterly</h4>
+                        <h2 class="gold-text mb-1">₹6,000<span class="fs-6 text-gray fw-light">/3mo</span></h2>
+                        <div class="text-muted small mb-4">+ 18% GST</div>
+                        <p class="text-gold small border-bottom border-secondary pb-3">Save 20% on Base Cost</p>
+                        <ul class="list-unstyled text-start text-white mb-4 mx-auto flex-grow-1" style="max-width: 200px; font-size: 0.9rem;">
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> 90-Day Access Code</li>
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> Advanced Analysis</li>
+                            <li class="mb-3"><i class="fas fa-check gold-text me-2"></i> VIP Telegram Access</li>
                         </ul>
-                        <button class="btn btn-outline-light w-100 mt-auto">Subscribe Monthly</button>
+                        <button class="btn btn-gold w-100 mt-auto text-dark fw-bold">Get CMS Pro</button>
                     </div>
                 </div>
 
-                <!-- Tier 3: Quarterly Power User Pack -->
+                <!-- Yearly -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="glass-card p-4 rounded-4 text-center d-flex flex-column h-100 transform-scale-105 shadow-gold border-gradient position-relative">
-                        <div class="position-absolute top-0 start-50 translate-middle badge bg-warning text-dark px-4 py-1 rounded-pill fw-bold">Best Alpha Conversion</div>
-                        <h4 class="text-white mb-2 mt-2">Quarterly Terminal</h4>
-                        <div class="my-3">
-                            <h2 class="gold-text display-5 fw-bold mb-0">₹6,000</h2>
-                            <span class="text-muted small">Billed Every 3 Months</span>
-                        </div>
-                        <div class="badge bg-success-dim text-success small mb-3 w-70 mx-auto">Saves 20% Base Cost</div>
-                        <hr class="border-secondary my-3">
-                        <ul class="list-unstyled text-gray small text-start mb-4 flex-grow-1">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>All Monthly Analytical Systems</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Extended 90-Day Access Code</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>VIP Telegram Community</li>
+                    <div class="glass-card p-4 h-100 text-center border-secondary hover-lift d-flex flex-column">
+                        <h4 class="text-white font-heading mb-2 mt-4">Annually</h4>
+                        <h2 class="text-white mb-1">₹15,000<span class="fs-6 fw-light text-gray">/yr</span></h2>
+                        <div class="text-muted small mb-4">+ 18% GST</div>
+                        <p class="text-success small border-bottom border-secondary pb-3">Save 50% on Base Cost</p>
+                        <ul class="list-unstyled text-start text-gray mb-4 mx-auto flex-grow-1" style="max-width: 200px; font-size: 0.9rem;">
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> 365-Day Access Code</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> 1-on-1 Setup Assist</li>
+                            <li class="mb-3"><i class="fas fa-check text-success me-2"></i> Priority VIP Support</li>
                         </ul>
-                        <button class="btn btn-gold w-100 mt-auto text-dark fw-bold tracking-wide">Get CMS Terminal</button>
-                    </div>
-                </div>
-
-                <!-- Tier 4: Enterprise Annual License -->
-                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                    <div class="glass-card p-4 rounded-4 text-center d-flex flex-column h-100 hover-glow">
-                        <h4 class="text-white mb-2">Annual License</h4>
-                        <div class="my-3">
-                            <h2 class="gold-text display-5 fw-bold mb-0">₹15,000</h2>
-                            <span class="text-muted small">Billed Annually</span>
-                        </div>
-                        <div class="badge bg-success-dim text-success small mb-3 w-70 mx-auto">Saves 50% Base Cost</div>
-                        <hr class="border-secondary my-3">
-                        <ul class="list-unstyled text-gray small text-start mb-4 flex-grow-1">
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Complete Systematic Software Suit</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>365-Day Deployment Token</li>
-                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>VIP Technical Setup Execution</li>
-                        </ul>
-                        <button class="btn btn-outline-light w-100 mt-auto">Subscribe Annually</button>
+                        <button class="btn btn-outline-light w-100 mt-auto">Subscribe Yearly</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NEW: Founder / Mission Section (Small & Premium) -->
-    <section class="py-6 position-relative bg-premium-gradient">
+    <!-- How CMS Works -->
+    <section id="workflow" class="py-6 border-top border-dark">
         <div class="container">
+            <div class="text-center mb-6" data-aos="fade-up">
+                <span class="gold-text text-uppercase tracking-widest small fw-bold">Platform Workflow</span>
+                <h2 class="display-6 fw-bold text-white mt-2 font-heading">How CMS Pro <span class="gold-text">Works</span></h2>
+            </div>
+
+            <div class="roadmap-timeline position-relative px-3 mx-auto" style="max-width: 800px;">
+                <!-- Line -->
+                <div class="position-absolute bg-secondary opacity-25" style="left: 20px; top: 0; bottom: 0; width: 2px;"></div>
+                
+                <!-- Steps -->
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">1. Connect to TradingView</h4>
+                    <p class="text-gray small">Instantly deploy the CMS script onto your TradingView account with one click. No complex installation required.</p>
+                </div>
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right" data-aos-delay="100">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">2. Algo Maps The Chart</h4>
+                    <p class="text-gray small">The algorithm automatically scans and plots institutional Order Blocks, Fair Value Gaps, and Liquidity Pools.</p>
+                </div>
+                <div class="roadmap-item position-relative mb-5 ps-5" data-aos="fade-right" data-aos-delay="200">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">3. Confirm Market Structure</h4>
+                    <p class="text-gray small">Wait for the indicator to signal a valid Market Structure Shift (MSS) indicating smart money intervention.</p>
+                </div>
+                <div class="roadmap-item position-relative ps-5" data-aos="fade-right" data-aos-delay="300">
+                    <div class="roadmap-dot position-absolute bg-gold rounded-circle shadow-gold" style="left: 14px; top: 0; width: 14px; height: 14px;"></div>
+                    <h4 class="text-white font-heading mb-2">4. Institutional Execution</h4>
+                    <p class="text-gray small">Execute your trade at the exact premium/discount zones where institutions deploy their capital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM FOUNDER SECTION (Subtle) -->
+    <section id="founder" class="py-6 bg-premium-gradient position-relative border-top border-bottom border-gold border-opacity-25">
+        <div class="container position-relative z-1">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="glass-panel p-4 p-md-5 rounded-4 shadow-premium border-gradient" data-aos="fade-up">
+                    <div class="glass-panel p-5 rounded-4 shadow-premium border-gradient" data-aos="fade-up">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <h3 class="font-heading text-white mb-3">Engineered for <span class="gold-text">Professional Execution</span></h3>
-                                <p class="text-gray font-body mb-4" style="line-height: 1.8;">
-                                    Capital Mindset was built with a singular vision: to bridge the gap between retail noise and institutional reality. Our mission is to equip serious traders with algorithmic decision-support tools that decode market structure, track smart money footprints, and enable high-probability execution.
-                                </p>
-                                <!-- Founder Name (Small & Subtle Signature) -->
+                                <h6 class="gold-text tracking-widest text-uppercase small mb-3">The Vision</h6>
+                                <h3 class="text-white font-heading mb-4 lh-base">"Trading is not about predicting the next candle. It is the ruthless execution of a proven statistical edge while protecting capital."</h3>
+                                
                                 <div class="border-top border-secondary pt-3 mt-4">
                                     <p class="text-white mb-0 font-body text-uppercase tracking-widest" style="font-size: 0.85rem;">
-                                        <span class="text-gray">Architecture by</span> [तुझं नाव / Your Name]
+                                        <span class="text-gray">Architecture by</span> Amit Deshmukh
                                     </p>
-                                    <p class="text-gold small mb-0 font-mono">Founder & Lead Quantitative Analyst</p>
+                                    <p class="text-gold small mb-0 font-mono">Founder, Capital Mindset</p>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center mt-4 mt-md-0 d-none d-md-block">
-                                <!-- Abstract Icon representing Strategy/Algorithm -->
                                 <i class="fas fa-chess-knight text-gold opacity-50" style="font-size: 6rem;"></i>
                             </div>
                         </div>
@@ -319,62 +494,85 @@
         </div>
     </section>
 
-    <!-- Platform Footer Architecture & Legalities -->
-    <footer id="contact" class="bg-black pt-6 pb-4 border-top border-secondary position-relative">
+    <!-- Contact Support -->
+    <section id="contact" class="py-6 border-top border-dark">
         <div class="container">
-            <div class="row g-4 mb-5">
-                <div class="col-lg-5">
-                    <img src="logo.png" alt="Capital Mindset Operational Logo" height="70" class="mb-3 nav-logo" loading="lazy">
-                    <p class="text-gray small pe-lg-5">
-                        Capital Mindset is a cutting-edge technical architecture company producing predictive intelligence systems and quantitative indicators tailored for professional market data review.
-                    </p>
+            <h2 class="text-center text-white display-6 fw-bold font-heading mb-5" data-aos="fade-up">Contact <span class="gold-text">Support</span></h2>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <a href="#" class="glass-card p-5 text-center d-block text-decoration-none hover-glow border-gradient rounded h-100">
+                        <i class="fab fa-whatsapp fa-3x text-success mb-3"></i>
+                        <h4 class="text-white mb-2">WhatsApp Support</h4>
+                        <span class="text-gray small d-block mb-3">Fastest response for queries.</span>
+                        <span class="btn btn-outline-light btn-sm mt-auto">Message Us</span>
+                    </a>
                 </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" class="glass-card p-5 text-center d-block text-decoration-none hover-glow border-gradient rounded h-100">
+                        <i class="fab fa-telegram-plane fa-3x text-info mb-3"></i>
+                        <h4 class="text-white mb-2">Telegram Channel</h4>
+                        <span class="text-gray small d-block mb-3">Join our open community.</span>
+                        <span class="btn btn-outline-light btn-sm mt-auto">Join Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="bg-black pt-6 pb-4 border-top border-gold border-opacity-50 position-relative">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <!-- Branding -->
+                <div class="col-lg-5">
+                    <h3 class="gold-text fw-bold text-uppercase brand-text font-heading mb-3">Capital Mindset</h3>
+                    <p class="text-gray small mb-4 pe-lg-4 lh-lg">Founded by Amit Deshmukh. The premier destination for algorithmic price action software and institutional trading logic.</p>
+                </div>
+                
+                <!-- Links -->
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-3 tracking-wide">Platform Access</h5>
+                    <h5 class="text-white font-heading mb-4 fs-6 text-uppercase tracking-widest">Platform</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#features">Platform Features</a></li>
-                        <li><a href="#pricing">License Plans</a></li>
-                        <li><a href="#terminal">Live Analytical Terminal</a></li>
-                        <li><a href="#">Contact via WhatsApp</a></li>
-                        <li><a href="#">Telegram Community</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#terminal">Live Terminal</a></li>
+                        <li><a href="#cms-indicator">CMS Pro Software</a></li>
+                        <li><a href="#pricing">License Pricing</a></li>
                     </ul>
                 </div>
+                
+                <!-- Legal -->
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-white mb-3 tracking-wide">Compliance & Legal</h5>
+                    <h5 class="text-white font-heading mb-4 fs-6 text-uppercase tracking-widest">Compliance & Legal</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="privacy.html" class="text-muted">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="text-muted">Terms & Conditions</a></li>
-                        <li><a href="refund.html" class="text-muted">Refund Policy</a></li>
-                        <li><a href="disclaimer.html" class="text-muted">Risk Disclaimer</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
                     </ul>
                 </div>
             </div>
-
-            <!-- MANDATORY LEGAL RISK DISCLAIMER COMPLIANCE -->
-            <div class="glass-panel p-4 rounded-3 mb-4 border-gradient shadow-premium">
-                <p class="text-gray small m-0 terminal-font text-start" style="line-height: 1.6; font-size: 0.8rem;">
-                    <span class="text-white fw-bold d-block mb-2"><i class="fas fa-exclamation-triangle text-warning me-2"></i>RISK DISCLAIMER & LEGAL COMPLIANCE:</span>
+            
+            <hr class="border-secondary opacity-25">
+            
+            <!-- Strict Legal -->
+            <div class="text-center mt-4">
+                <p class="text-warning small fw-bold text-uppercase tracking-wide mb-2"><i class="fas fa-triangle-exclamation me-1"></i> LEGAL COMPLIANCE & RISK DISCLAIMER</p>
+                <p class="text-muted mx-auto mb-4" style="max-width: 900px; font-size: 0.75rem; line-height: 1.6;">
                     Capital Mindset provides analytical tools for educational and decision-support purposes only. Trading and investing involve substantial financial risk. Users are solely responsible for their own trading decisions and outcomes. Past performance does not guarantee future results. 
                     <br><br>
-                    The CMS Pro Indicator architecture functions strictly as an automated algorithmic mathematical engine configured exclusively for analytical data streaming and structural backtesting research simulations. We are explicitly NOT SEBI-registered research analysts or asset management advisers. This software system processes purely quantitative charting mechanics and does not generate absolute trading execution signals, financial recommendations, advisory pointers, or assurances of absolute capital appreciation. Speculative financial instruments contain inherent liquidity risks. You operate entirely at your own financial discretion, maintaining ultimate accountability for personal liability risk parameters.
+                    The CMS Pro Indicator architecture functions strictly as an automated algorithmic mathematical engine configured exclusively for analytical data streaming and structural backtesting research simulations. We are explicitly NOT SEBI-registered research analysts or asset management advisers. This software system processes purely quantitative charting mechanics and does not generate absolute trading execution signals. 
                     <br><br>
                     TradingView&reg; is a registered trademark of its respective owner. Capital Mindset is an independent software platform and is not affiliated with, endorsed by, or sponsored by TradingView.
                 </p>
-            </div>
-
-            <div class="text-center border-top border-secondary pt-4 mt-4">
-                <p class="text-gray small mb-0 terminal-font">
-                    Copyright &copy; <span id="year">2026</span> Capital Mindset. All Rights Reserved. Engineered for Professional Algorithmic Execution.
-                </p>
+                <p class="text-secondary small mb-0">&copy; <span id="year"></span> Capital Mindset by Amit Deshmukh. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap Core Bundle Javascript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Local Application Javascript Logic -->
     <script src="script.js"></script>
 </body>
 </html>
