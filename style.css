@@ -79,7 +79,7 @@ body { background-color: var(--bg-dark); color: var(--text-white); font-family: 
 .glass-nav.scrolled { padding: 0.5rem 0; background: rgba(0,0,0,0.95); border-bottom-color: var(--glass-border); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
     
 /* --- Navbar Logo Fix --- */
-.nav-logo { height: 75px; width: auto; object-fit: contain; }
+.nav-logo { height: 60px; width: auto; object-fit: contain; }
 
 .brand-text { font-size: 1.5rem; letter-spacing: 1px; }
 .nav-link { color: var(--text-white) !important; position: relative; margin: 0 0.5rem; transition: color 0.3s; }
@@ -109,11 +109,10 @@ body { background-color: var(--bg-dark); color: var(--text-white); font-family: 
 .chart-line { position: absolute; height: 1px; background: currentColor; border-top: 1px dashed currentColor; }
 .chart-box { background: rgba(212, 175, 55, 0.1); }
 
-/* --- Accordion (FAQ) --- */
-.custom-accordion .accordion-button { background: var(--bg-black); color: var(--text-white); box-shadow: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
-.custom-accordion .accordion-button:not(.collapsed) { color: var(--gold); background: var(--gold-dim); }
-.custom-accordion .accordion-button::after { filter: invert(1) grayscale(100%) brightness(200%); }
-.custom-accordion .accordion-button:not(.collapsed)::after { filter: invert(70%) sepia(50%) saturate(500%) hue-rotate(5deg); }
+/* --- Workflow / Timeline --- */
+.roadmap-timeline { position: relative; }
+.roadmap-item { position: relative; }
+.roadmap-dot { z-index: 2; border: 2px solid var(--bg-dark); }
 
 /* --- Forms & Footer --- */
 .premium-input { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); color: white; border-radius: 4px; padding: 0.8rem 1rem; transition: all 0.3s; }
