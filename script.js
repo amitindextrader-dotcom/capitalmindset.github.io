@@ -88,16 +88,48 @@ document.addEventListener('DOMContentLoaded', () => {
     
     simulateTerminalData();
 
-    // 5. Dynamic Year for Footer
+    // 5. Scroll Counters (For static stats in terminal)
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        if(counters.length === 0) return;
+        
+        const speed = 100; 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    
+                    const updateCount = () => {
+                        const count = +counter.innerText;
+                        const inc = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = (count + inc).toFixed(1);
+                            setTimeout(updateCount, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                    observer.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counters.forEach(counter => observer.observe(counter));
+    }
+    animateCounters();
+
+    // 6. Dynamic Year for Footer
     const yearElem = document.getElementById('year');
     if(yearElem) yearElem.textContent = new Date().getFullYear();
 
-    // 6. Smooth Scroll for Anchor Links (Mobile Menu Fix)
+    // 7. Smooth Scroll for Anchor Links (Mobile Menu Fix)
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             const navbarCollapse = document.getElementById('navbarNav');
             if(navbarCollapse && navbarCollapse.classList.contains('show')) {
-                // Check if bootstrap is defined
                 if(typeof bootstrap !== 'undefined') {
                     let bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
                     bsCollapse.hide();
