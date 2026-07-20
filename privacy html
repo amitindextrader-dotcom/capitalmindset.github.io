@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Capital Mindset</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white p-4 p-md-5">
+    <div class="container max-w-600 mx-auto glass-panel p-4 p-md-5 rounded border-gradient">
+        <a href="index.html" class="gold-text text-decoration-none small mb-4 d-inline-block"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1 class="font-heading mb-4">Privacy Policy</h1>
+        <p class="text-gray small">Last Updated: July 2026</p>
+        <div class="text-gray small" style="line-height: 1.8;">
+            <p>At Capital Mindset, we take your privacy seriously. This policy outlines how we collect, use, and protect your personal data when you use our software and services.</p>
+            <h5 class="text-white mt-4">1. Data Collection</h5>
+            <p>We collect information such as your name, email address, and TradingView username strictly for licensing and granting access to the CMS Pro indicator.</p>
+            <h5 class="text-white mt-4">2. Payment Security</h5>
+            <p>We do not store your credit card or payment details. All transactions are securely processed via certified third-party payment gateways (e.g., Razorpay, Stripe).</p>
+            <h5 class="text-white mt-4">3. Data Sharing</h5>
+            <p>We will never sell, rent, or distribute your personal information to third parties under any circumstances.</p>
+        </div>
+    </div>
+</body>
+</html>

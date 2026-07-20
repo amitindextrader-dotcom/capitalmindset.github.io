@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Capital Mindset</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-white p-4 p-md-5">
+    <div class="container max-w-600 mx-auto glass-panel p-4 p-md-5 rounded border-gradient">
+        <a href="index.html" class="gold-text text-decoration-none small mb-4 d-inline-block"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1 class="font-heading mb-4">Terms & Conditions</h1>
+        <p class="text-gray small">Last Updated: July 2026</p>
+        <div class="text-gray small" style="line-height: 1.8;">
+            <p>By accessing and using Capital Mindset (CMS Pro), you agree to abide by these terms of service.</p>
+            <h5 class="text-white mt-4">1. Educational Use Only</h5>
+            <p>Our software and indicators are provided solely for educational and analytical purposes. We do not provide financial advice, tips, or portfolio management services. We are NOT SEBI registered.</p>
+            <h5 class="text-white mt-4">2. Software License</h5>
+            <p>Purchasing a plan grants you a personal, non-transferable license to use the CMS Pro script on TradingView. You may not copy, reverse-engineer, or distribute our proprietary code.</p>
+            <h5 class="text-white mt-4">3. Risk Acknowledgement</h5>
+            <p>Trading financial markets involves high risk. You are solely responsible for your own trades and capital. Capital Mindset and Amit Deshmukh hold no liability for your financial losses.</p>
+        </div>
+    </div>
+</body>
+</html>
